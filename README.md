@@ -3,11 +3,13 @@
 ## Todo
 
 ### **기본기능 구현하기**
-- [ ] Menu.Vue, Result.Vue 만들기  
-- [ ] Menu에서 선택한 아이템 Result에서 보여지도록 만들기
+- [V] Menu.Vue, Result.Vue 만들기  
+- [V] index.html 수정 ++ favicon 추가😉
+- [V] Menu에서 선택한 아이템 Result에서 보여지도록 만들기
 - [ ] Menu에 아이템 뿌리기
   - [ ] 일단 기본 메뉴만 데이터 파일 만들어서 보여주기
 - [ ] Result에서 삭제 가능하도록 
+- [ ] 이미 카트에 추가된 메뉴면 수량 올라가도록
 - [ ] 기본 CSS (mobile-friendly)
 
 ### **추가 기능 구현하기**

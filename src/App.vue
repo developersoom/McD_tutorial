@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+      </nav>
+    <menu-detail @selected="addToCart"></menu-detail>
+    <cart v-if="selectedMenuList" :selectedMenuList="selectedMenuList">
+    </cart>
+    </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import MenuDetail from '@/components/MenuDetail.vue';
+import Cart from '@/components/Cart.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    MenuDetail, Cart
   },
+  methods: {
+    addToCart(menu) {
+      this.selectedMenuList.push(menu);
+    }
+  },
+  data() {
+    return {
+      selectedMenuList: [],
+    }
+  }
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ 
 </style>
