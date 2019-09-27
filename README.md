@@ -21,3 +21,7 @@
 ### **UI/UX**
 - [ ] 첫화면, 배달 방법, 결제 컴포넌트 만들기 
 - [ ] 애니메이션 추가
+- [ ] scroll 꾸미기
+
+### **배포**
+- [ ] 뱁호 (https://mcd-tutorial.developersoom.now.sh/ ~~섣불리 해버렸군~~)
