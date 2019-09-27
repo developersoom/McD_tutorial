@@ -36,6 +36,24 @@ export default {
           price: '₩2,600',
           cal: '376 Kcal',
         },
+        {
+          name: '베이컨 토마토 디럭스™',
+          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1314.png',
+          price: '₩5,900',
+          cal: '522 Kcal',
+        },
+        {
+          name: '골든 에그 치즈버거',
+          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/7513.png',
+          price: '₩7,600',
+          cal: '707 Kcal',
+        },
+        {
+          name: '맥스파이시® 상하이버거',
+          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1303.png',
+          price: '₩5,100',
+          cal: '467 Kcal',
+        },
       ]
     }
   }
@@ -44,7 +62,9 @@ export default {
 
 <style>
   .menu-board {
+    width: 80vw;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 </style>
