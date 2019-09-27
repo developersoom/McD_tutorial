@@ -1,14 +1,24 @@
 <template>
-  <div class="menu-board"> 
+  <div class="menu-board" v-if="isDataReady"> 
     <menu-info @selected="addMenu" :menu="menu" :index="index" v-for="(menu, index) in menuList" :key="index"></menu-info>
+  </div>
+  <div class="menu-board" v-else> 
+    loading... 
   </div>
 </template>
 
 <script>
 import MenuInfo from '@/components/MenuInfo.vue';
+import API from '@/lib/API'
+
 export default {
   components: {
-    MenuInfo,
+    MenuInfo, API
+  },
+  async mounted() {
+    const url = "https://www.mcdelivery.co.kr/kr/browse/menu.html?daypartId=1&catId=11";
+    this.menuList = await API.getData(url);
+    this.isDataReady = true;
   },
   methods: {
     addMenu(menu) {
@@ -17,44 +27,8 @@ export default {
   },
   data() {
     return {
-      menuList: [
-        {
-          name: '1955 버거™',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1340.png',
-          price: '₩6,100',
-          cal: '508 Kcal',
-        },
-        {
-          name: '빅맥®',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1301.png',
-          price: '₩5,100',
-          cal: '514 Kcal',
-        },
-        {
-          name: '불고기버거',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/5214.png',
-          price: '₩2,600',
-          cal: '376 Kcal',
-        },
-        {
-          name: '베이컨 토마토 디럭스™',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1314.png',
-          price: '₩5,900',
-          cal: '522 Kcal',
-        },
-        {
-          name: '골든 에그 치즈버거',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/7513.png',
-          price: '₩7,600',
-          cal: '707 Kcal',
-        },
-        {
-          name: '맥스파이시® 상하이버거',
-          img: 'https://www.mcdelivery.co.kr/kr/static/1568769939351/assets/82/products/1303.png',
-          price: '₩5,100',
-          cal: '467 Kcal',
-        },
-      ]
+      menuList: [],
+      isDataReady: false,
     }
   }
 }

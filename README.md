@@ -10,11 +10,11 @@
   - [-] 일단 기본 메뉴만 데이터 파일 만들어서 보여주기 (그냥 data return 으로 일단..)
 - [V] Result에서 삭제 가능하도록 
 - [V] 이미 카트에 추가된 메뉴면 수량 올라가도록 (nexTick으로 해야하지 않을까?)
-- [ ] 기본 CSS (mobile-friendly)
+- [V] 기본 CSS (mobile-friendly)
 
 ### **추가 기능 구현하기**
-- [ ] Category.vue 만들기
-- [ ] 맥도날드 사이트에서 메뉴 크롤링으로 긁어서 데이터 저장하기 
+- [V] Category.vue 만들기
+- [V] 맥도날드 사이트에서 메뉴 크롤링으로 긁어서 데이터 저장하기 (모바일에선 안됨.. axios가 안되나?)
 - [ ] Category에 맞게 Menu 뿌려지도록 구현하기
   - [ ] vue-router? 
 
